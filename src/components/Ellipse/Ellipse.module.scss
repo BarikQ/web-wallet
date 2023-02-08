@@ -1,0 +1,12 @@
+@use 'src/assets/styles/_colors.scss' as colors; 
+
+.ellipse {
+  width: 459px;
+  height: 690px;
+  background: colors.$turquoise;
+  opacity: 0.5;
+  border-radius: 50%;
+  filter: blur(100px);
+  transform: rotate(-65.41deg);
+}
+
