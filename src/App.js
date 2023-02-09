@@ -1,8 +1,11 @@
 import { ethers } from "ethers";
 
-import "./App.scss";
 import Ellipse from "./components/Ellipse/Ellipse";
 import Header from "./components/Header/Header";
+import Footer from "components/Footer/Footer";
+import Layout from "components/Layout/Layout";
+
+import styles from "./App.module.scss";
 
 function App() {
   const connectHandler = async () => {
@@ -23,11 +26,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Layout className={styles.app}>
       <Header />
-      <Ellipse />
-      <button onClick={connectHandler}> Connect Wallet </button>{" "}
-    </div>
+      <main className={styles.main}>
+        <button onClick={connectHandler}> Connect Wallet </button>
+      </main>
+      <Footer />
+    </Layout>
   );
 }
 

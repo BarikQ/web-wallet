@@ -1,0 +1,47 @@
+@use 'src/assets/styles/_colors.scss'as colors;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  .ellipse:nth-child(1) {
+    left: -142px;
+    top: -40px;
+    background-color: colors.$turquoise;
+  }
+
+  .ellipse:nth-child(2) {
+    right: 270px;
+    top: -30px;
+    opacity: 0.15;
+    transform: matrix(-0.42, -0.91, -0.91, 0.42, 0, 0);
+  }
+
+  .ellipse:nth-child(3) {
+    left: -21px;
+    bottom: 110px;
+    opacity: 0.15;
+  }
+
+  .ellipse:nth-child(4) {
+    right: -50px;
+    bottom: -140px;
+    background-color: colors.$turquoise;
+    transform: rotate(-131.25deg);
+  }
+}
+
+.ellipse {
+  position: absolute;
+  z-index: -1;
+}

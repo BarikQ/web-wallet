@@ -1,0 +1,69 @@
+@use "src/assets/styles/_colors.scss" as colors;
+@use "src/assets/styles/_sizes.scss" as sizes;
+
+$button-max-width: 200px;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: colors.$light-greyscale-bglight;
+  border-top: 1px solid colors.$light-greyscale-stroke;
+  position: relative;
+}
+
+.footerContent {
+  width: 100%;
+  max-width: sizes.$max-desktop-width;
+  padding: 40px sizes.$padding-sides-l;
+  display: grid;
+  grid-template: auto auto / auto 1fr auto;
+  gap: 30px 16px;
+  align-items: flex-start;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.logo {
+  width: fit-content;
+  height: 24px;
+  justify-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: nowrap;
+  gap: 16px;
+}
+
+.socialList {
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  gap: 0 32px;
+
+  li {
+    height: min-content;
+  }
+}
+
+.author {
+  grid-column: 1/4;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (max-width: sizes.$tablet) {
+  .logo {
+    grid-area: 1/1/2/4;
+    position: static;
+    transform: none;
+  }
+}

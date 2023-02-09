@@ -1,0 +1,47 @@
+@use 'src/assets/styles/_colors.scss' as colors; 
+@use 'src/assets/styles/_sizes.scss' as sizes; 
+
+$button-max-width: 200px;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid colors.$light-greyscale-stroke;
+  position: relative;
+}
+
+.headerContent {
+  max-width: sizes.$max-desktop-width;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px sizes.$padding-sides-l;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    max-width: $button-max-width;
+  }
+
+  @media (max-width: sizes.$tablet) {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.logo {
+  width: fit-content;
+  height: 24px;
+}
+
+.button {
+  flex-grow: 1;
+  max-width: $button-max-width;
+  justify-self: flex-end;
+  white-space: nowrap;
+}
