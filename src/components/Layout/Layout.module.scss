@@ -19,7 +19,7 @@
     left: -142px;
     top: -40px;
     background-color: colors.$turquoise;
-    animation-name: ellipse-1;
+    // animation-name: ellipse-1; // отключил, т.к. плохо оптимизировал
     animation-duration: 8s;
   }
 
@@ -28,7 +28,7 @@
     top: -30px;
     opacity: 0.15;
     transform: matrix(-0.42, -0.91, -0.91, 0.42, 0, 0);
-    animation-name: ellipse-2;
+    // animation-name: ellipse-2;
     animation-duration: 6s;
   }
 
@@ -36,7 +36,7 @@
     left: -21px;
     bottom: 110px;
     opacity: 0.15;
-    animation-name: ellipse-3;
+    // animation-name: ellipse-3;
     animation-duration: 10s;
   }
 
@@ -45,7 +45,7 @@
     bottom: -140px;
     background-color: colors.$turquoise;
     transform: rotate(-131.25deg);
-    animation-name: ellipse-4;
+    // animation-name: ellipse-4;
     animation-duration: 12s;
   }
 }
