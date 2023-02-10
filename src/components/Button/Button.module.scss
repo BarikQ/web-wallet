@@ -12,18 +12,16 @@
   line-height: 24px;
   color: colors.$white;
   cursor: pointer;
-}
 
-.medium {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #092326;
-}
+  @media (max-width: sizes.$tablet) {
+    padding: sizes.$padding-m;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-.small {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  color: #092326;
+  @media (max-width: sizes.$mobile-l) {
+    padding: sizes.$padding-s;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }

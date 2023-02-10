@@ -1,4 +1,4 @@
-@use 'src/assets/styles/_colors.scss'as colors;
+@use "src/assets/styles/_colors.scss" as colors;
 
 .layout {
   display: flex;
@@ -13,24 +13,31 @@
   left: 0;
   top: 0;
   overflow: hidden;
+  z-index: -1;
 
   .ellipse:nth-child(1) {
     left: -142px;
     top: -40px;
     background-color: colors.$turquoise;
+    animation-name: ellipse-1;
+    animation-duration: 8s;
   }
 
   .ellipse:nth-child(2) {
-    right: 270px;
+    right: -11px;
     top: -30px;
     opacity: 0.15;
     transform: matrix(-0.42, -0.91, -0.91, 0.42, 0, 0);
+    animation-name: ellipse-2;
+    animation-duration: 6s;
   }
 
   .ellipse:nth-child(3) {
     left: -21px;
     bottom: 110px;
     opacity: 0.15;
+    animation-name: ellipse-3;
+    animation-duration: 10s;
   }
 
   .ellipse:nth-child(4) {
@@ -38,10 +45,39 @@
     bottom: -140px;
     background-color: colors.$turquoise;
     transform: rotate(-131.25deg);
+    animation-name: ellipse-4;
+    animation-duration: 12s;
   }
 }
 
 .ellipse {
   position: absolute;
   z-index: -1;
+  animation-iteration-count: infinite;
+}
+
+// анимации можно было бы изменить на %, чтобы на больших экранах они всё равно были в центре+-
+@keyframes ellipse-1 {
+  0% { left: 50px; top: 30px; }
+  25% { left: 100px; top: 200px; }
+  50% { left: 50px; top: 100px; }
+  100% { left: 0px; top: 0px; }
+}
+@keyframes ellipse-2 {
+  0% { right: -11px; top: -30px; }
+  25% { right: 40px; top: 60px; }
+  50% { right: 20px; top: 25px; }
+  100% { right: -11px; top: -30px; }
+}
+@keyframes ellipse-3 {
+  0% { left: -21px; bottom: -140px; }
+  25% { left: 100px; bottom: 60px; }
+  50% { left: 20px; bottom: 0px; }
+  100% { left: -21px; bottom: -140px; }
+}
+@keyframes ellipse-4 {
+  0% { right: -50px; bottom: -140px; }
+  25% { right: 140px; bottom: 230px; }
+  50% { right: 50px; bottom: -30px; }
+  100% { right: -80px; bottom: -100px; }
 }

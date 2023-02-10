@@ -10,6 +10,10 @@ $button-max-width: 200px;
   background: rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid colors.$light-greyscale-stroke;
   position: relative;
+
+  @media (max-width: sizes.$mobile-l) {
+    border: none;
+  }
 }
 
 .headerContent {
@@ -28,15 +32,25 @@ $button-max-width: 200px;
   }
 
   @media (max-width: sizes.$tablet) {
+    padding: 12px sizes.$padding-sides-s;
+    
     &::before {
       content: none;
     }
   }
 }
 
-.logo {
-  width: fit-content;
-  height: 24px;
+.logoLink {
+  display: flex;
+
+  svg {
+    width: fit-content;
+    height: 24px;
+    
+    @media (max-width: sizes.$mobile-l) {
+      height: 16px;
+    }
+  }
 }
 
 .button {
